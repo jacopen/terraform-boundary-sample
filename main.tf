@@ -58,6 +58,8 @@ resource "boundary_auth_method" "password" {
 }
 
 ## User and account
+
+### REPLACE ME!!!
 resource "boundary_account" "jacopen" {
   auth_method_id = boundary_auth_method.password.id
   type           = "password"
@@ -71,6 +73,7 @@ resource "boundary_user" "jacopen" {
   account_ids = [boundary_account.jacopen.id]
   scope_id    = boundary_scope.wells_org.id
 }
+### REPLACE ME!!!
 
 ## Role
 resource "boundary_role" "wells_org_read" {
